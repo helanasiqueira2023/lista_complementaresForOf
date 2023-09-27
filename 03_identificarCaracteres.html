@@ -6,11 +6,15 @@
     */
 
     //Entrada
-
+const palavra = prompt(`Informe uma palavra:`).trim().toLowerCase();
+let consoantes = [];
+let vogais = [];
 
     //Processamento
-
-
+for (const caracter of palavra) {
+    if(/[aeiou]/.test(caracter)) vogais++;
+else if(/[a-z]/.test(caracter)) consoantes++;
+}
     //Saída
-
+document.write(`Quantidade de vogais ${vogais} Quantidade de consoantes: ${consoantes}`);
 </script>
